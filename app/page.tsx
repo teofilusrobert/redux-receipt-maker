@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
-import { Counter } from "./components/counter/Counter";
+import { Ingredient } from "./components/Ingredient";
+import { Receipt } from "./components/Receipt";
 
 export default function IndexPage() {
-  return <Counter />;
+  return (
+    <div>
+      <div className="flex gap-4 p-4 flex-col sm:flex-row">
+        <Ingredient />
+        <Receipt />
+      </div>
+    </div>
+  )
 }
 
 export const metadata: Metadata = {
-  title: "Redux Toolkit",
+  title: "Receipt Maker",
 };
